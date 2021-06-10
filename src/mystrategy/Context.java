@@ -25,5 +25,9 @@ public class Context {
         strategy.Sort(array);
         return a.elapsedTime();
     }
-
+    
+    public void ChangeStrat(ISortStrategy strategy)
+    {
+        this.strategy = strategy;
+    }
 }
