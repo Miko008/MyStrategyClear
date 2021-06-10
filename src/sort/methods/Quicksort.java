@@ -9,7 +9,7 @@ package sort.methods;
  *
  * @author LeopardProMK
  */
-public class Quicksort {
+public class Quicksort implements ISortStrategy{
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
     // A utility function to swap two elements
     static void swap(double[] arr, int i, int j)
@@ -73,7 +73,7 @@ public class Quicksort {
             quickSort(arr, pi + 1, high);
         }
     }
-    public static void Sort(double[] array)
+    public void Sort(double[] array)
     {
         quickSort(array,0,array.length-1);
     }

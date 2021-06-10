@@ -9,7 +9,9 @@ package sort.strategy;
  *
  * @author LeopardProMK
  */
-class Stopwatch {
+public class Stopwatch {
+
+
 
     private final long start;
 

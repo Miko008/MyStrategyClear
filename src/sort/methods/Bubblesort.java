@@ -9,10 +9,10 @@ package sort.methods;
  *
  * @author LeopardProMK
  */
-public class Bubblesort {
+public class Bubblesort implements ISortStrategy{
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-babelkowe-bubblesort.html */
     
-    public static void Sort(double[] array)
+    public void Sort(double[] array)
     {
         int n = array.length;
         for (int i = 0; i < n-1; i++)

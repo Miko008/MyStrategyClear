@@ -25,26 +25,48 @@ public class Client {
         /* Algorytmy sortowania */
         // http://www.algorytm.org/algorytmy-sortowania/
         
-        double[] data = DataGenerator.generate(1000);
-        Bubblesort.Sort(data);
-        System.out.println(CheckSort(data));
-        
-        data = DataGenerator.generate(1000);
-        Insertionsort.Sort(data);
-        System.out.println(CheckSort(data));
-        
-        data = DataGenerator.generate(1000);
-        Quicksort.Sort(data);                
-        System.out.println(CheckSort(data));
-        
-        data = DataGenerator.generate(1000);
-        Selectionsort.Sort(data);
-        System.out.println(CheckSort(data));
+        // quick check
+//        double[] data = DataGenerator.generate(1000);
+//        Bubblesort.Sort(data);
+//        System.out.println(CheckSort(data));
+//        
+//        data = DataGenerator.generate(1000);
+//        Insertionsort.Sort(data);
+//        System.out.println(CheckSort(data));
+//        
+//        data = DataGenerator.generate(1000);
+//        Quicksort.Sort(data);                
+//        System.out.println(CheckSort(data));
+//        
+//        data = DataGenerator.generate(1000);
+//        Selectionsort.Sort(data);
+//        System.out.println(CheckSort(data));
         
        /* Wzorzec Stratega */
         //...
-       
-        System.out.println("Time: ??");
+        Context context = new Context(new Quicksort());
+        double[] data = DataGenerator.generate(100000);
+        double[] datacopy = data.clone(); 
+        System.out.println("Time: " + context.Sort(data));
+        System.out.println(CheckSort(data));
+        
+        
+        context = new Context(new Bubblesort());
+        data = datacopy.clone();
+        System.out.println("Time: " + context.Sort(data));
+        System.out.println(CheckSort(data));
+        
+        context = new Context(new Insertionsort());
+        data = datacopy.clone();
+        System.out.println("Time: " + context.Sort(data));
+        System.out.println(CheckSort(data));
+        
+        context = new Context(new Bubblesort());
+        data = datacopy.clone();
+        System.out.println("Time: " + context.Sort(data));
+        System.out.println(CheckSort(data));
+        
+        
     }
     
     public static boolean CheckSort(double[] array) {
